@@ -1,2 +1,3 @@
 /logs/*
-/assets/*
+/assets/traj.bag
+/assets/traj.pickle
