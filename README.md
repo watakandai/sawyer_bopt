@@ -12,6 +12,16 @@ For `melodic`, copy and paste as it is, others change `melodic` to your specific
 sudo apt install ros-melodic-qt-build ros-melodic-gazebo-ros-control ros-melodic-gazebo-ros-pkgs ros-melodic-ros-control ros-melodic-control-toolbox ros-melodic-realtime-tools ros-melodic-ros-controllers ros-melodic-xacro python-wstool ros-melodic-tf-conversions ros-melodic-kdl-parser ros-melodic-sns-ik-lib ros-melodic-effort-controllers
 ```
 
+## Installation 
+```
+sudo apt-get install ros-melodic-gazebo-ros-pkgs ros-melodic-gazebo-ros-control
+```
+
+## Requirements
+```
+pip install dill pydmps
+```
+
 
 ## Image
 ![gazebo_simulation](assets/gazebo_simulation.png)
