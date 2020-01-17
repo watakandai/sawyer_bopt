@@ -1,26 +1,44 @@
 # Gazebo Simulation of "Motion learning using Bayesian optimization in an environment with an unkown object
 
-## Installation of `saywer_robot`
-For `melodic`, copy and paste as it is, others change `melodic` to your specific version. 
+## Gazebo Installation
+Before doing anything, turn off pyenv or any other python version management package.
+Just use defualt python 2. <br>
+
+
+1. Install ROS Melodic by following the official tutorials.
+- http://wiki.ros.org/melodic/Installation/Ubuntu
+- http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment
+
+2. After installing ROS, install [Sawyer Simulation](http://nu-msr.github.io/embedded-course-site/notes/baxter_introduction.html#sawyer-build-instructions). 
 ```
-sudo apt-get install git-core python-argparse python-wstool python-vcstools python-rosdep ros-melodic-control-msgs ros-melodic-joystick-drivers ros-melodic-xacro ros-melodic-tf2-ros ros-melodic-rviz ros-melodic-cv-bridge ros-melodic-actionlib ros-melodic-actionlib-msgs ros-melodic-dynamic-reconfigure ros-melodic-trajectory-msgs ros-melodic-rospy-message-converter
+cd ~/catkin_ws/src/
+wstool init
+wstool merge https://gist.githubusercontent.com/jarvisschultz/f65d36e3f99d94a6c3d9900fa01ee72e/raw/sawyer_packages.rosinstall
+wstool update
+cd ..
+catkin_make
 ```
 
-## Installation of `saywer_simulator`
-For `melodic`, copy and paste as it is, others change `melodic` to your specific version. 
+3. Another package we need is [sawyer_pykdl](https://github.com/rupumped/sawyer_pykdl)
+
 ```
-sudo apt install ros-melodic-qt-build ros-melodic-gazebo-ros-control ros-melodic-gazebo-ros-pkgs ros-melodic-ros-control ros-melodic-control-toolbox ros-melodic-realtime-tools ros-melodic-ros-controllers ros-melodic-xacro python-wstool ros-melodic-tf-conversions ros-melodic-kdl-parser ros-melodic-sns-ik-lib ros-melodic-effort-controllers
+cd ~/catkin_ws/src/
+git clone https://github.com/rupumped/sawyer_pykdl.git
+cd ..
+catkin_make
 ```
 
-## Installation 
+4. clone this repository. 
 ```
-sudo apt-get install ros-melodic-gazebo-ros-pkgs ros-melodic-gazebo-ros-control
-```
+cd ~/catkin_ws/src/
+git clone git@github.com:watakandai/sawyer_bopt.git
+cd ..
+catkin_make
+cd ~/catkin_ws/src/sawyer_bopt
+./install.sh
+``` 
 
-## Requirements
-```
-pip install dill pydmps
-```
+5. Manually, download `traj.bag` from my [Google Drive](https://drive.google.com/file/d/1QcMMU8FDnmpvHfBZvd4fnifWIUG64hnU/view?usp=sharing). Place it under `assets/`
 
 
 ## Image

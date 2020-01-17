@@ -1,2 +1,2 @@
-pip install dill pydmps
-cp model_editor_models ~/
+pip install -r requirements.txt
+cp -r model_editor_models ~/
