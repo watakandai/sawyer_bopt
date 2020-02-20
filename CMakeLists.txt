@@ -30,7 +30,6 @@ include_directories(
 #############
 
 install(PROGRAMS
-   scripts/position_control.py
    DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
